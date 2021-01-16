@@ -36,19 +36,19 @@ lbdemo-monitoring-grafana:
 
 lbdemo:
   defines: process-group
-  balancers:
-    defines: balancers
-    app-balancer:
-      port: 9944
-      type: http
-      health-check:
-        kind: tcp
-        request: ""
-        interval: 5
-        response: ""
-      instances:
-        - eteissonniere/lbdemo-node-a
-        - eteissonniere/lbdemo-node-b
+  #balancers:
+  #  defines: balancers
+  #  app-balancer:
+  #    port: 9944
+  #    type: http
+  #    health-check:
+  #      kind: tcp
+  #      request: ""
+  #      interval: 5
+  #      response: ""
+  #    instances:
+  #      - eteissonniere/lbdemo-node-a
+  #      - eteissonniere/lbdemo-node-b
   runnable-list:
     - eteissonniere/lbdemo-node-a
     - eteissonniere/lbdemo-node-b
